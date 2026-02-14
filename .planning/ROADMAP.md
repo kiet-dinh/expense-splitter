@@ -1,0 +1,88 @@
+# Roadmap: Expense Splitter
+
+## Overview
+
+Build a mobile-first web app that splits restaurant bills accurately among friends. The project starts with a correct math engine (the trust foundation), then layers on the full bill-entry UI, then adds sharing and history. Four phases deliver a complete, locally-persistent bill splitter with no backend required.
+
+## Phases
+
+**Phase Numbering:**
+- Integer phases (1, 2, 3): Planned milestone work
+- Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
+
+Decimal phases appear between their surrounding integers in numeric order.
+
+- [ ] **Phase 1: Foundation** - Scaffold project and build a correct, tested calculation engine
+- [ ] **Phase 2: Core UI** - Complete happy path: add people, items, assignments, tip/tax, see results
+- [ ] **Phase 3: Results Polish** - Copy-to-clipboard summary and itemized per-person receipt view
+- [ ] **Phase 4: Persistence** - Save, browse, and delete bill history in local storage
+
+## Phase Details
+
+### Phase 1: Foundation
+**Goal**: A tested calculation engine exists that handles all monetary math without floating-point errors or rounding mistakes
+**Depends on**: Nothing (first phase)
+**Requirements**: MATH-01, MATH-02
+**Success Criteria** (what must be TRUE):
+  1. A unit test splits $10.00 three ways and asserts the three shares sum to exactly 1000 cents
+  2. A unit test verifies proportional tip and tax distributions using the largest-remainder method produce zero residual
+  3. The project builds and runs locally with the full stack (React, TypeScript, Vite, Zustand, Tailwind)
+**Plans**: TBD
+
+Plans:
+- [ ] 01-01: Scaffold Vite + React + TypeScript + Zustand + Tailwind project
+- [ ] 01-02: Implement calculation engine with integer-cent arithmetic and largest-remainder rounding
+
+### Phase 2: Core UI
+**Goal**: Users can enter a complete restaurant bill and see a correct per-person breakdown without refreshing the page
+**Depends on**: Phase 1
+**Requirements**: PEOPLE-01, PEOPLE-02, PEOPLE-03, PEOPLE-04, ITEM-01, ITEM-02, ITEM-03, ITEM-04, ASSIGN-01, ASSIGN-02, ASSIGN-03, ASSIGN-04, TIP-01, TIP-02, TAX-01, TAX-02, RESULT-01, RESULT-02
+**Success Criteria** (what must be TRUE):
+  1. User can add and remove named people, and sees a warning on duplicate name entry
+  2. User can add, edit, and delete line items and sees a running subtotal update in real time
+  3. User can assign any item to one person, multiple people equally, multiple people with custom portions, or everyone at once
+  4. User can set tip via preset buttons (15%, 18%, 20%) or custom input, and choose equal or proportional split
+  5. User sees a per-person breakdown with subtotal, tip share, tax share, and total, plus a grand-total verification
+**Plans**: TBD
+
+Plans:
+- [ ] 02-01: People and item panels with Zustand state
+- [ ] 02-02: Assignment panel and tip/tax settings panel
+- [ ] 02-03: Results panel with per-person breakdown and grand-total verification
+
+### Phase 3: Results Polish
+**Goal**: Users can share the split result and inspect exactly which items they owe
+**Depends on**: Phase 2
+**Requirements**: RESULT-03, RESULT-04
+**Success Criteria** (what must be TRUE):
+  1. User can copy a formatted text summary of the split to the clipboard with one tap
+  2. User can view an itemized receipt showing each person's individual items and their assigned shares
+**Plans**: TBD
+
+Plans:
+- [ ] 03-01: Copy-to-clipboard summary and itemized receipt view
+
+### Phase 4: Persistence
+**Goal**: Users can save a completed split, browse past splits by name, and delete ones they no longer need
+**Depends on**: Phase 3
+**Requirements**: PERSIST-01, PERSIST-02, PERSIST-03
+**Success Criteria** (what must be TRUE):
+  1. User can save a named split and reload the app to find it still listed in history
+  2. User can tap a past split to view its full breakdown
+  3. User can delete a saved split and it is removed from the list immediately
+**Plans**: TBD
+
+Plans:
+- [ ] 04-01: Save/load bill history with versioned schema and local storage
+
+## Progress
+
+**Execution Order:**
+Phases execute in numeric order: 1 → 2 → 3 → 4
+
+| Phase | Plans Complete | Status | Completed |
+|-------|----------------|--------|-----------|
+| 1. Foundation | 0/2 | Not started | - |
+| 2. Core UI | 0/3 | Not started | - |
+| 3. Results Polish | 0/1 | Not started | - |
+| 4. Persistence | 0/1 | Not started | - |

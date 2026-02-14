@@ -76,7 +76,7 @@ Deferred to future release. Tracked but not in current roadmap.
 ## Out of Scope
 
 | Feature | Reason |
-|---------|--------|
+| --- | --- |
 | User accounts / authentication | Unnecessary for local-first tool |
 | Backend / database | Browser-only, no server needed |
 | Multi-device sync | Single operator model, no backend |
@@ -89,38 +89,38 @@ Deferred to future release. Tracked but not in current roadmap.
 Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
-|-------------|-------|--------|
-| PEOPLE-01 | — | Pending |
-| PEOPLE-02 | — | Pending |
-| PEOPLE-03 | — | Pending |
-| PEOPLE-04 | — | Pending |
-| ITEM-01 | — | Pending |
-| ITEM-02 | — | Pending |
-| ITEM-03 | — | Pending |
-| ITEM-04 | — | Pending |
-| ASSIGN-01 | — | Pending |
-| ASSIGN-02 | — | Pending |
-| ASSIGN-03 | — | Pending |
-| ASSIGN-04 | — | Pending |
-| TIP-01 | — | Pending |
-| TIP-02 | — | Pending |
-| TAX-01 | — | Pending |
-| TAX-02 | — | Pending |
-| RESULT-01 | — | Pending |
-| RESULT-02 | — | Pending |
-| RESULT-03 | — | Pending |
-| RESULT-04 | — | Pending |
-| PERSIST-01 | — | Pending |
-| PERSIST-02 | — | Pending |
-| PERSIST-03 | — | Pending |
-| MATH-01 | — | Pending |
-| MATH-02 | — | Pending |
+| --- | --- | --- |
+| MATH-01 | Phase 1 | Pending |
+| MATH-02 | Phase 1 | Pending |
+| PEOPLE-01 | Phase 2 | Pending |
+| PEOPLE-02 | Phase 2 | Pending |
+| PEOPLE-03 | Phase 2 | Pending |
+| PEOPLE-04 | Phase 2 | Pending |
+| ITEM-01 | Phase 2 | Pending |
+| ITEM-02 | Phase 2 | Pending |
+| ITEM-03 | Phase 2 | Pending |
+| ITEM-04 | Phase 2 | Pending |
+| ASSIGN-01 | Phase 2 | Pending |
+| ASSIGN-02 | Phase 2 | Pending |
+| ASSIGN-03 | Phase 2 | Pending |
+| ASSIGN-04 | Phase 2 | Pending |
+| TIP-01 | Phase 2 | Pending |
+| TIP-02 | Phase 2 | Pending |
+| TAX-01 | Phase 2 | Pending |
+| TAX-02 | Phase 2 | Pending |
+| RESULT-01 | Phase 2 | Pending |
+| RESULT-02 | Phase 2 | Pending |
+| RESULT-03 | Phase 3 | Pending |
+| RESULT-04 | Phase 3 | Pending |
+| PERSIST-01 | Phase 4 | Pending |
+| PERSIST-02 | Phase 4 | Pending |
+| PERSIST-03 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 25 total
-- Mapped to phases: 0
-- Unmapped: 25 ⚠️
+- Mapped to phases: 25
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-02-13*
-*Last updated: 2026-02-13 after initial definition*
+*Last updated: 2026-02-13 after roadmap creation*

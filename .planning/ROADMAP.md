@@ -27,11 +27,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   1. A unit test splits $10.00 three ways and asserts the three shares sum to exactly 1000 cents
   2. A unit test verifies proportional tip and tax distributions using the largest-remainder method produce zero residual
   3. The project builds and runs locally with the full stack (React, TypeScript, Vite, Zustand, Tailwind)
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 01-01: Scaffold Vite + React + TypeScript + Zustand + Tailwind project
-- [ ] 01-02: Implement calculation engine with integer-cent arithmetic and largest-remainder rounding
+- [ ] 01-01-PLAN.md -- Scaffold Vite 7 + React 19 + TypeScript 5 + Zustand 5 + Tailwind v4 + Vitest 4 project
+- [ ] 01-02-PLAN.md -- TDD: Calculation engine with integer-cent arithmetic and largest-remainder rounding
 
 ### Phase 2: Core UI
 **Goal**: Users can enter a complete restaurant bill and see a correct per-person breakdown without refreshing the page

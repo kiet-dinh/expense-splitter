@@ -10,27 +10,27 @@ See: .planning/PROJECT.md (updated 2026-02-13)
 ## Current Position
 
 Phase: 1 of 4 (Foundation)
-Plan: 0 of 2 in current phase
-Status: Planned (ready to execute)
-Last activity: 2026-02-15 — Phase 1 planned (2 plans, 2 waves)
+Plan: 1 of 2 in current phase
+Status: Executing
+Last activity: 2026-02-16 — Plan 01-01 complete (scaffold + stack setup)
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [█░░░░░░░░░] 10%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: —
-- Total execution time: 0 hours
+- Total plans completed: 1
+- Average duration: 3 min
+- Total execution time: 0.05 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-foundation | 1/2 | 3 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: —
+- Last 5 plans: 3 min
 - Trend: —
 
 *Updated after each plan completion*
@@ -42,20 +42,22 @@ Progress: [░░░░░░░░░░] 0%
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
-- Stack: React 19 + TypeScript 5 + Vite 6 + Zustand 5 + Tailwind CSS + Vitest (verify versions against npm before scaffolding)
+- Stack: React 19 + TypeScript 5 + **Vite 7** (not 6) + Zustand 5 + Tailwind v4 + Vitest 4 — all versions confirmed via npm install
 - Math: All monetary values stored as integer cents; largest-remainder method for rounding distribution
 - Architecture: Three-layer design — Data Model, Calculation Engine (pure functions), UI Components
+- Tailwind v4: Configured via @tailwindcss/vite plugin — no tailwind.config.js or postcss.config.js needed
+- Vitest passWithNoTests: Added to vitest.config.ts and test script — Vitest 4 exits code 1 with no test files by default
 
 ### Pending Todos
 
-None yet.
+None.
 
 ### Blockers/Concerns
 
-- npm package versions must be verified before scaffolding (training data versions approximate; Zustand 5 and Tailwind v4 stability unconfirmed as of Jan 2025)
+None — npm package versions verified and installed successfully.
 
 ## Session Continuity
 
-Last session: 2026-02-15
-Stopped at: Phase 1 planned — ready to execute
+Last session: 2026-02-16
+Stopped at: Plan 01-01 complete — ready to execute Plan 01-02 (calculation engine)
 Resume file: None

@@ -12,7 +12,7 @@ Build a mobile-first web app that splits restaurant bills accurately among frien
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Scaffold project and build a correct, tested calculation engine
+- [x] **Phase 1: Foundation** - Scaffold project and build a correct, tested calculation engine (completed 2026-02-15)
 - [ ] **Phase 2: Core UI** - Complete happy path: add people, items, assignments, tip/tax, see results
 - [ ] **Phase 3: Results Polish** - Copy-to-clipboard summary and itemized per-person receipt view
 - [ ] **Phase 4: Persistence** - Save, browse, and delete bill history in local storage
@@ -30,8 +30,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md -- Scaffold Vite 7 + React 19 + TypeScript 5 + Zustand 5 + Tailwind v4 + Vitest 4 project
-- [ ] 01-02-PLAN.md -- TDD: Calculation engine with integer-cent arithmetic and largest-remainder rounding
+- [x] 01-01-PLAN.md -- Scaffold Vite 7 + React 19 + TypeScript 5 + Zustand 5 + Tailwind v4 + Vitest 4 project
+- [x] 01-02-PLAN.md -- TDD: Calculation engine with integer-cent arithmetic and largest-remainder rounding
 
 ### Phase 2: Core UI
 **Goal**: Users can enter a complete restaurant bill and see a correct per-person breakdown without refreshing the page
@@ -82,7 +82,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/2 | Not started | - |
+| 1. Foundation | 2/2 | ✓ Complete | 2026-02-15 |
 | 2. Core UI | 0/3 | Not started | - |
 | 3. Results Polish | 0/1 | Not started | - |
 | 4. Persistence | 0/1 | Not started | - |

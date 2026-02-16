@@ -5,14 +5,14 @@
 See: .planning/PROJECT.md (updated 2026-02-13)
 
 **Core value:** Accurately calculate what each person owes when a group shares a restaurant bill with mixed individual and shared items.
-**Current focus:** Phase 1 - Foundation
+**Current focus:** Phase 1 complete — ready for Phase 2 (Core UI)
 
 ## Current Position
 
 Phase: 1 of 4 (Foundation)
 Plan: 2 of 2 in current phase — PHASE COMPLETE
-Status: Complete
-Last activity: 2026-02-16 — Plan 01-02 complete (calculation engine with 28 tests)
+Status: Verified ✓
+Last activity: 2026-02-15 — Phase 1 verified (8/8 must-haves passed)
 
 Progress: [██░░░░░░░░] 20%
 

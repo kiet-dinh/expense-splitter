@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-13)
 ## Current Position
 
 Phase: 1 of 4 (Foundation)
-Plan: 1 of 2 in current phase
-Status: Executing
-Last activity: 2026-02-16 — Plan 01-01 complete (scaffold + stack setup)
+Plan: 2 of 2 in current phase — PHASE COMPLETE
+Status: Complete
+Last activity: 2026-02-16 — Plan 01-02 complete (calculation engine with 28 tests)
 
-Progress: [█░░░░░░░░░] 10%
+Progress: [██░░░░░░░░] 20%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
+- Total plans completed: 2
 - Average duration: 3 min
-- Total execution time: 0.05 hours
+- Total execution time: 0.08 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation | 1/2 | 3 min | 3 min |
+| 01-foundation | 2/2 | 5 min | 2.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 3 min
-- Trend: —
+- Last 5 plans: 3 min, 2 min
+- Trend: Stable
 
 *Updated after each plan completion*
 
@@ -47,6 +47,9 @@ Recent decisions affecting current work:
 - Architecture: Three-layer design — Data Model, Calculation Engine (pure functions), UI Components
 - Tailwind v4: Configured via @tailwindcss/vite plugin — no tailwind.config.js or postcss.config.js needed
 - Vitest passWithNoTests: Added to vitest.config.ts and test script — Vitest 4 exits code 1 with no test files by default
+- distribute() tiebreak: lower index wins when remainders are equal — ensures stable deterministic output
+- dollarsToCents() string-split: splits on "." and uses parseInt — avoids parseFloat * 100 floating-point error
+- centsToDollars() toFixed(2): acceptable only for display output, not stored computation
 
 ### Pending Todos
 
@@ -54,10 +57,10 @@ None.
 
 ### Blockers/Concerns
 
-None — npm package versions verified and installed successfully.
+None.
 
 ## Session Continuity
 
 Last session: 2026-02-16
-Stopped at: Plan 01-01 complete — ready to execute Plan 01-02 (calculation engine)
+Stopped at: Plan 01-02 complete — Phase 1 foundation complete, ready for Phase 2
 Resume file: None

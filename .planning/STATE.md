@@ -5,33 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-02-13)
 
 **Core value:** Accurately calculate what each person owes when a group shares a restaurant bill with mixed individual and shared items.
-**Current focus:** Phase 2 (Core UI) — Plan 2 complete, ready for Plan 3
+**Current focus:** Phase 2 (Core UI) — all 3 plans complete, phase done
 
 ## Current Position
 
 Phase: 2 of 4 (Core UI)
-Plan: 2 of 3 in current phase — complete
+Plan: 3 of 3 in current phase — complete
 Status: Verified ✓
-Last activity: 2026-02-16 — Plan 02-02 complete (76/76 tests pass, 0 type errors, build passes)
+Last activity: 2026-02-16 — Plan 02-03 complete (106/106 tests pass, 0 type errors, build passes)
 
-Progress: [████░░░░░░] 40%
+Progress: [█████░░░░░] 50%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 2.8 min
-- Total execution time: 0.19 hours
+- Total plans completed: 5
+- Average duration: 2.6 min
+- Total execution time: 0.21 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 2/2 | 5 min | 2.5 min |
-| 02-core-ui | 2/3 | 6 min | 3 min |
+| 02-core-ui | 3/3 | 9 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 4 min, 3 min, 2 min, 2 min
+- Last 5 plans: 3 min, 4 min, 3 min, 2 min, 2 min
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -61,6 +61,10 @@ Recent decisions affecting current work:
 - Tests use Enter key (user.keyboard('{Enter}')) to commit inline edits — more reliable than blur in jsdom
 - tsconfig.app.json types include @testing-library/jest-dom — required since test files under src/ are compiled in build
 - PEOPLE-04 (quick-add from previous splits) deferred to Phase 4 — requires localStorage persistence
+- ItemRow sub-component in AssignSection: encapsulates per-item mode state, initialized from store assignment
+- useMemo wraps computeResults in ResultsSection: prevents unnecessary recomputes on unrelated renders
+- Scoped role=group + aria-label for split mode buttons: disambiguates tip vs tax buttons in tests
+- getAllByText used when dollar amounts appear in both per-person cards and grand total summary
 
 ### Pending Todos
 
@@ -73,5 +77,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-16
-Stopped at: Plan 02-02 complete — PeopleSection + ItemSection + App.tsx layout ready, plan 02-03 unblocked
+Stopped at: Plan 02-03 complete — Phase 2 (Core UI) fully complete with 5 components, 106 tests, full happy path working
 Resume file: None

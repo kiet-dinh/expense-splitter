@@ -43,12 +43,12 @@ Plans:
   3. User can assign any item to one person, multiple people equally, multiple people with custom portions, or everyone at once
   4. User can set tip via preset buttons (15%, 18%, 20%) or custom input, and choose equal or proportional split
   5. User sees a per-person breakdown with subtotal, tip share, tax share, and total, plus a grand-total verification
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 02-01: People and item panels with Zustand state
-- [ ] 02-02: Assignment panel and tip/tax settings panel
-- [ ] 02-03: Results panel with per-person breakdown and grand-total verification
+- [ ] 02-01-PLAN.md -- Zustand store, computeResults function, and test infrastructure
+- [ ] 02-02-PLAN.md -- People and Item UI sections with component tests
+- [ ] 02-03-PLAN.md -- Assignment, Tip/Tax, and Results UI sections with final App composition
 
 ### Phase 3: Results Polish
 **Goal**: Users can share the split result and inspect exactly which items they owe

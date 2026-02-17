@@ -1,5 +1,8 @@
-import { ItemSection } from './components/ItemSection'
 import { PeopleSection } from './components/PeopleSection'
+import { ItemSection } from './components/ItemSection'
+import { AssignSection } from './components/AssignSection'
+import { TipTaxSection } from './components/TipTaxSection'
+import { ResultsSection } from './components/ResultsSection'
 
 function App() {
   return (
@@ -9,7 +12,9 @@ function App() {
         <div className="space-y-6">
           <PeopleSection />
           <ItemSection />
-          {/* AssignSection, TipTaxSection, ResultsSection added in 02-03 */}
+          <AssignSection />
+          <TipTaxSection />
+          <ResultsSection />
         </div>
       </div>
     </div>

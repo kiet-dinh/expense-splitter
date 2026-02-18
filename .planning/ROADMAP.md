@@ -13,8 +13,8 @@ Build a mobile-first web app that splits restaurant bills accurately among frien
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Scaffold project and build a correct, tested calculation engine (completed 2026-02-15)
-- [ ] **Phase 2: Core UI** - Complete happy path: add people, items, assignments, tip/tax, see results
-- [ ] **Phase 3: Results Polish** - Copy-to-clipboard summary and itemized per-person receipt view
+- [x] **Phase 2: Core UI** - Complete happy path: add people, items, assignments, tip/tax, see results (completed 2026-02-16)
+- [x] **Phase 3: Results Polish** - Copy-to-clipboard summary and itemized per-person receipt view (completed 2026-02-17)
 - [ ] **Phase 4: Persistence** - Save, browse, and delete bill history in local storage
 
 ## Phase Details
@@ -46,9 +46,9 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md -- Zustand store, computeResults function, and test infrastructure
-- [ ] 02-02-PLAN.md -- People and Item UI sections with component tests
-- [ ] 02-03-PLAN.md -- Assignment, Tip/Tax, and Results UI sections with final App composition
+- [x] 02-01-PLAN.md -- Zustand store, computeResults function, and test infrastructure
+- [x] 02-02-PLAN.md -- People and Item UI sections with component tests
+- [x] 02-03-PLAN.md -- Assignment, Tip/Tax, and Results UI sections with final App composition
 
 ### Phase 3: Results Polish
 **Goal**: Users can share the split result and inspect exactly which items they owe
@@ -60,20 +60,22 @@ Plans:
 **Plans**: TBD
 
 Plans:
-- [ ] 03-01: Copy-to-clipboard summary and itemized receipt view
+- [x] 03-01: Copy-to-clipboard summary and itemized receipt view
 
 ### Phase 4: Persistence
 **Goal**: Users can save a completed split, browse past splits by name, and delete ones they no longer need
 **Depends on**: Phase 3
-**Requirements**: PERSIST-01, PERSIST-02, PERSIST-03
+**Requirements**: PERSIST-01, PERSIST-02, PERSIST-03, PEOPLE-04
 **Success Criteria** (what must be TRUE):
   1. User can save a named split and reload the app to find it still listed in history
   2. User can tap a past split to view its full breakdown
   3. User can delete a saved split and it is removed from the list immediately
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: Save/load bill history with versioned schema and local storage
+- [ ] 04-01-PLAN.md — Persisted history store (useHistoryStore with Zustand persist middleware)
+- [ ] 04-02-PLAN.md — HistorySection UI (list, load, delete) wired into App.tsx
+- [ ] 04-03-PLAN.md — Save Split button in ResultsSection + PEOPLE-04 quick-add chips in PeopleSection
 
 ## Progress
 
@@ -81,8 +83,8 @@ Plans:
 Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
-|-------|----------------|--------|-----------|
+| --- | --- | --- | --- |
 | 1. Foundation | 2/2 | ✓ Complete | 2026-02-15 |
-| 2. Core UI | 0/3 | Not started | - |
-| 3. Results Polish | 0/1 | Not started | - |
-| 4. Persistence | 0/1 | Not started | - |
+| 2. Core UI | 3/3 | ✓ Complete | 2026-02-16 |
+| 3. Results Polish | 1/1 | ✓ Complete | 2026-02-17 |
+| 4. Persistence | 0/3 | Not started | - |

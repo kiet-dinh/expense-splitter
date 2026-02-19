@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-02-13)
 ## Current Position
 
 Phase: 4 of 4 (Persistence) — In Progress
-Plan: 1 of 3 in current phase — complete
+Plan: 2 of 3 in current phase — complete
 Status: In Progress
-Last activity: 2026-02-18 — Plan 04-01 complete (historyStore.ts created, 128/128 tests pass, 0 type errors)
+Last activity: 2026-02-18 — Plan 04-02 complete (HistorySection.tsx created, 135/135 tests pass, 0 type errors)
 
-Progress: [████████░░] 80%
+Progress: [█████████░] 88%
 
 ## Performance Metrics
 
@@ -70,6 +70,7 @@ Recent decisions affecting current work:
 - Separate useHistoryStore from useBillStore — only history persisted, bill store remains ephemeral
 - partialize: (state) => ({ savedSplits: state.savedSplits }) — excludes non-serializable action functions from localStorage
 - CURRENT_SCHEMA_VERSION = 1 used as both persist version and schemaVersion field on each SavedSplit entry
+- Spy on useBillStore.setState after store setup calls (not before) to avoid capturing setup setState in test assertions
 
 ### Pending Todos
 
@@ -82,5 +83,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-18
-Stopped at: Plan 04-01 complete — historyStore.ts created with Zustand persist middleware
+Stopped at: Plan 04-02 complete — HistorySection.tsx, tests, and App.tsx wired up
 Resume file: None

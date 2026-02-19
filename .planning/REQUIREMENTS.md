@@ -12,7 +12,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **PEOPLE-01**: User can add people to a bill by name
 - [ ] **PEOPLE-02**: User can remove people from a bill
 - [ ] **PEOPLE-03**: User sees a warning when entering a duplicate name
-- [ ] **PEOPLE-04**: User can quick-add names from previous splits
+- [x] **PEOPLE-04**: User can quick-add names from previous splits
 
 ### Item Entry
 
@@ -95,7 +95,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PEOPLE-01 | Phase 2 | Pending |
 | PEOPLE-02 | Phase 2 | Pending |
 | PEOPLE-03 | Phase 2 | Pending |
-| PEOPLE-04 | Phase 2 | Pending |
+| PEOPLE-04 | Phase 2 | Complete |
 | ITEM-01 | Phase 2 | Pending |
 | ITEM-02 | Phase 2 | Pending |
 | ITEM-03 | Phase 2 | Pending |

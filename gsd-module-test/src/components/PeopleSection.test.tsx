@@ -3,6 +3,7 @@ import { cleanup, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { useBillStore } from '../store/billStore'
+import { useHistoryStore } from '../store/historyStore'
 import { PeopleSection } from './PeopleSection'
 
 afterEach(() => {
@@ -20,7 +21,23 @@ beforeEach(() => {
     taxValue: 0,
     taxSplitMode: 'equal',
   })
+  localStorage.clear()
+  useHistoryStore.setState({ savedSplits: [] })
 })
+
+function seedHistory(names: string[]) {
+  useHistoryStore.getState().saveSplit({
+    name: 'Test',
+    people: names.map((n, i) => ({ id: String(i), name: n })),
+    items: [],
+    assignments: [],
+    tipPercent: 0,
+    tipSplitMode: 'equal',
+    taxMode: 'amount',
+    taxValue: 0,
+    taxSplitMode: 'equal',
+  })
+}
 
 describe('PeopleSection', () => {
   it('renders an input and add button', () => {
@@ -107,5 +124,42 @@ describe('PeopleSection', () => {
     await user.click(screen.getByRole('button', { name: /add/i }))
 
     expect(useBillStore.getState().people).toHaveLength(0)
+  })
+
+  describe('PEOPLE-04 suggestion chips', () => {
+    it('shows no suggestion chips when history is empty', () => {
+      render(<PeopleSection />)
+      expect(screen.queryByLabelText(/Add .* from previous split/)).not.toBeInTheDocument()
+    })
+
+    it('shows suggestion chips for names in history not already in bill', () => {
+      seedHistory(['Alice', 'Bob'])
+      render(<PeopleSection />)
+      expect(screen.getByRole('button', { name: 'Add Alice from previous split' })).toBeInTheDocument()
+      expect(screen.getByRole('button', { name: 'Add Bob from previous split' })).toBeInTheDocument()
+    })
+
+    it('does not show chip for name already in current bill (case-insensitive)', () => {
+      seedHistory(['Alice'])
+      useBillStore.setState({ people: [{ id: 'p1', name: 'Alice' }] })
+      render(<PeopleSection />)
+      expect(screen.queryByRole('button', { name: 'Add Alice from previous split' })).not.toBeInTheDocument()
+    })
+
+    it('clicking a suggestion chip adds the person to the bill', async () => {
+      const user = userEvent.setup()
+      seedHistory(['Alice'])
+      render(<PeopleSection />)
+      await user.click(screen.getByRole('button', { name: 'Add Alice from previous split' }))
+      expect(useBillStore.getState().people.some((p) => p.name === 'Alice')).toBe(true)
+    })
+
+    it('chip disappears after clicking it (person now in bill)', async () => {
+      const user = userEvent.setup()
+      seedHistory(['Alice'])
+      render(<PeopleSection />)
+      await user.click(screen.getByRole('button', { name: 'Add Alice from previous split' }))
+      expect(screen.queryByRole('button', { name: 'Add Alice from previous split' })).not.toBeInTheDocument()
+    })
   })
 })

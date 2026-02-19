@@ -1,8 +1,7 @@
 import { useId, useState } from 'react'
 import { useShallow } from 'zustand/shallow'
 import { useBillStore } from '../store/billStore'
-
-// PEOPLE-04: quick-add from previous splits — deferred to Phase 4 (requires localStorage)
+import { useHistoryStore } from '../store/historyStore'
 
 export function PeopleSection() {
   const { people, addPerson, removePerson } = useBillStore(
@@ -13,6 +12,8 @@ export function PeopleSection() {
     }))
   )
 
+  const { savedSplits } = useHistoryStore(useShallow((s) => ({ savedSplits: s.savedSplits })))
+
   const [nameInput, setNameInput] = useState('')
   const inputId = useId()
 
@@ -21,6 +22,13 @@ export function PeopleSection() {
     people.some(
       (p) => p.name.toLowerCase() === nameInput.trim().toLowerCase()
     )
+
+  const currentNames = new Set(people.map((p) => p.name.toLowerCase()))
+  const suggestions = Array.from(
+    new Set(
+      savedSplits.flatMap((split) => split.people.map((p) => p.name))
+    )
+  ).filter((name) => !currentNames.has(name.toLowerCase()))
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -60,6 +68,25 @@ export function PeopleSection() {
           </p>
         )}
       </form>
+
+      {suggestions.length > 0 && (
+        <div className="mt-3" aria-label="Suggestions from previous splits">
+          <p className="text-xs text-gray-500 mb-1">From previous splits:</p>
+          <div className="flex flex-wrap gap-1">
+            {suggestions.map((name) => (
+              <button
+                key={name}
+                type="button"
+                onClick={() => addPerson(name)}
+                className="rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1"
+                aria-label={`Add ${name} from previous split`}
+              >
+                {name}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       {people.length > 0 && (
         <ul className="mt-4 space-y-2">

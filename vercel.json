@@ -1,7 +1,5 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "cd gsd-module-test && npm install && npm run build",
   "outputDirectory": "gsd-module-test/dist",
-  "installCommand": "npm install",
-  "framework": "vite",
-  "rootDirectory": "gsd-module-test"
+  "framework": null
 }

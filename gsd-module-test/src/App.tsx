@@ -3,6 +3,7 @@ import { ItemSection } from './components/ItemSection'
 import { AssignSection } from './components/AssignSection'
 import { TipTaxSection } from './components/TipTaxSection'
 import { ResultsSection } from './components/ResultsSection'
+import { HistorySection } from './components/HistorySection'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <AssignSection />
           <TipTaxSection />
           <ResultsSection />
+          <HistorySection />
         </div>
       </div>
     </div>

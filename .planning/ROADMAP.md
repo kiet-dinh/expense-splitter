@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation** - Scaffold project and build a correct, tested calculation engine (completed 2026-02-15)
 - [x] **Phase 2: Core UI** - Complete happy path: add people, items, assignments, tip/tax, see results (completed 2026-02-16)
 - [x] **Phase 3: Results Polish** - Copy-to-clipboard summary and itemized per-person receipt view (completed 2026-02-17)
-- [x] **Phase 4: Persistence** - Save, browse, and delete bill history in local storage (completed 2026-02-19)
+- [x] **Phase 4: Persistence** - Save, browse, and delete bill history in local storage (completed 2026-02-18)
 
 ## Phase Details
 
@@ -73,9 +73,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Persisted history store (useHistoryStore with Zustand persist middleware)
-- [ ] 04-02-PLAN.md — HistorySection UI (list, load, delete) wired into App.tsx
-- [ ] 04-03-PLAN.md — Save Split button in ResultsSection + PEOPLE-04 quick-add chips in PeopleSection
+- [x] 04-01-PLAN.md — Persisted history store (useHistoryStore with Zustand persist middleware)
+- [x] 04-02-PLAN.md — HistorySection UI (list, load, delete) wired into App.tsx
+- [x] 04-03-PLAN.md — Save Split button in ResultsSection + PEOPLE-04 quick-add chips in PeopleSection
 
 ## Progress
 
@@ -87,4 +87,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Foundation | 2/2 | ✓ Complete | 2026-02-15 |
 | 2. Core UI | 3/3 | ✓ Complete | 2026-02-16 |
 | 3. Results Polish | 1/1 | ✓ Complete | 2026-02-17 |
-| 4. Persistence | 3/3 | Complete   | 2026-02-19 |
+| 4. Persistence | 3/3 | ✓ Complete | 2026-02-18 |

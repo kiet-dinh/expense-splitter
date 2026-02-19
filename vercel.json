@@ -1,5 +1,6 @@
 {
-  "buildCommand": "cd gsd-module-test && npm install && npm run build",
+  "installCommand": "cd gsd-module-test && npm install",
+  "buildCommand": "cd gsd-module-test && npm run build",
   "outputDirectory": "gsd-module-test/dist",
   "framework": null
 }

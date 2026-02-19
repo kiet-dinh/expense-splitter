@@ -44,7 +44,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Persistence
 
-- [ ] **PERSIST-01**: User can save a completed split to browser local storage
+- [x] **PERSIST-01**: User can save a completed split to browser local storage
 - [ ] **PERSIST-02**: User can view a list of previously saved splits
 - [ ] **PERSIST-03**: User can delete a saved split
 
@@ -112,7 +112,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | RESULT-02 | Phase 2 | Pending |
 | RESULT-03 | Phase 3 | Pending |
 | RESULT-04 | Phase 3 | Pending |
-| PERSIST-01 | Phase 4 | Pending |
+| PERSIST-01 | Phase 4 | Complete |
 | PERSIST-02 | Phase 4 | Pending |
 | PERSIST-03 | Phase 4 | Pending |
 
